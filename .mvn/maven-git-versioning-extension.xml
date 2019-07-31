@@ -1,0 +1,24 @@
+<configuration>
+    <branches>
+        <branch>
+            <pattern>master</pattern>
+            <versionFormat>${version.release}.${buildNumber}</versionFormat>
+        </branch>
+        <branch>
+            <pattern>staging</pattern>
+            <versionFormat>${version.release}-${branch}-SNAPSHOT</versionFormat>
+        </branch>
+        <branch>
+             <pattern>feature/.*</pattern>
+             <prefix>feature/</prefix>
+             <versionFormat>${version.release}-${branch}-SNAPSHOT</versionFormat>
+         </branch>
+    </branches>
+    <tags>
+        <tag>
+            <pattern>version/.*</pattern>
+            <prefix>version/</prefix>
+            <versionFormat>${tag}</versionFormat>
+        </tag>
+    </tags>
+</configuration>
